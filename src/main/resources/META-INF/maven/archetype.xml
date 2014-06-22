@@ -7,16 +7,16 @@
     <source>src/main/java/WebServer.java</source>
   </sources>
   <resources>
-  	<resource>src/main/reresources/spring/spring.xml</resource>
-  	<resource>src/main/reresources/undertow/spring.xml</resource>
-  	<resource>src/main/reresources/WEB-INF/spring.xml</resource>
-  	<resource>src/main/reresources/WEB-INF/data-context.xml</resource>
-  	<resource>src/main/reresources/WEB-INF/security-context.xml</resource>
-  	<resource>src/main/reresources/WEB-INF/servlet-context.xml</resource>
-  	<resource>src/main/reresources/app-dev.properties</resource>
-  	<resource>src/main/reresources/app-test.properties</resource>
-  	<resource>src/main/reresources/logback.xml</resource>
-  	<resource>src/main/reresources/logback-test.xml</resource>
+  	<resource>src/main/resources/spring/spring.xml</resource>
+  	<resource>src/main/resources/undertow/spring.xml</resource>
+  	<resource>src/main/resources/WEB-INF/spring.xml</resource>
+  	<resource>src/main/resources/WEB-INF/data-context.xml</resource>
+  	<resource>src/main/resources/WEB-INF/security-context.xml</resource>
+  	<resource>src/main/resources/WEB-INF/servlet-context.xml</resource>
+  	<resource>src/main/resources/app-dev.properties</resource>
+  	<resource>src/main/resources/app-test.properties</resource>
+  	<resource>src/main/resources/logback.xml</resource>
+  	<resource>src/main/resources/logback-test.xml</resource>
   </resources>
   <testSources>
     <source>src/test/java/AppTest.java</source>
