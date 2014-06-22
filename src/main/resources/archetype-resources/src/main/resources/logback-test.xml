@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender class="ch.qos.logback.core.ConsoleAppender" name="STDOUT">
+        <!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder
+            by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    <logger level="WARN" name="com.jayway.jsonpath"/>
+    <logger level="INFO" name="io.undertow"/>
+    <logger level="WARN" name="org.apache.commons.beanutils"/>
+    <logger level="WARN" name="org.hibernate"/>
+    <logger level="WARN" name="org.springframework"/>
+    <logger level="DEBUG" name="org.springframework.mail"/>
+    <logger level="ERROR" name="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver"/>
+    <logger level="ERROR" name="org.xnio"/>
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
