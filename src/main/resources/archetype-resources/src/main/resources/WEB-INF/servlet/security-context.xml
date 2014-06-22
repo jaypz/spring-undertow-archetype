@@ -20,11 +20,6 @@
         <constructor-arg name="strength" value="${security.bcrypt.strength}"/>
     </bean>
 
-    <bean id="authenticationEntryPoint"
-          class="at.a1telekom.cdn.web.security.JSONAuthenticationEntryPoint">
-        <property name="realmName" value="${security.realm}"/>
-    </bean>
-
     <bean id="authenticationManager"
           class="org.springframework.security.authentication.ProviderManager">
         <constructor-arg name="providers">
@@ -45,20 +40,9 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-
-<!--     <crypt:b64SymmetricCiphererWithStaticKey
-            id="encrypter" keyAlgorithm="DESede" cipherAlgorithm="DESede/CBC/PKCS5Padding"
-            key="${crypto.key}" initializationVector="${crypto.initialization-vector}"
-            mode="ENCRYPT"/>
-
-    <crypt:b64SymmetricCiphererWithStaticKey
-            id="decrypter" keyAlgorithm="DESede" cipherAlgorithm="DESede/CBC/PKCS5Padding"
-            key="${crypto.key}" initializationVector="${crypto.initialization-vector}"
-            mode="DECRYPT"/>
- -->
     <security:global-method-security secured-annotations="enabled"/>
 
-    <http entry-point-ref="authenticationEntryPoint" authentication-manager-ref="authenticationManager"
+    <http authentication-manager-ref="authenticationManager"
           use-expressions="true"
           xmlns="http://www.springframework.org/schema/security">
 
