@@ -1,3 +1,5 @@
+package ${package};
+
 import io.undertow.Undertow;
 import io.undertow.servlet.Servlets;
 import io.undertow.servlet.api.DeploymentInfo;
