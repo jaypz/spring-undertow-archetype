@@ -7,16 +7,16 @@
     <source>src/main/java/WebServer.java</source>
   </sources>
   <resources>
-  	<source>src/resources/spring/spring.xml</source>
-  	<source>src/resources/undertow/spring.xml</source>
-  	<source>src/resources/WEB-INF/spring.xml</source>
-  	<source>src/resources/WEB-INF/data-context.xml</source>
-  	<source>src/resources/WEB-INF/security-context.xml</source>
-  	<source>src/resources/WEB-INF/servlet-context.xml</source>
-  	<source>src/resources/app-dev.properties</source>
-  	<source>src/resources/app-test.properties</source>
-  	<source>src/resources/logback.xml</source>
-  	<source>src/resources/logback-test.xml</source>
+  	<source>src/main/resources/spring/spring.xml</source>
+  	<source>src/main/resources/undertow/spring.xml</source>
+  	<source>src/main/resources/WEB-INF/spring.xml</source>
+  	<source>src/main/resources/WEB-INF/data-context.xml</source>
+  	<source>src/main/resources/WEB-INF/security-context.xml</source>
+  	<source>src/main/resources/WEB-INF/servlet-context.xml</source>
+  	<source>src/main/resources/app-dev.properties</source>
+  	<source>src/main/resources/app-test.properties</source>
+  	<source>src/main/resources/logback.xml</source>
+  	<source>src/main/resources/logback-test.xml</source>
   </resources>
   <testSources>
     <source>src/test/java/AppTest.java</source>
