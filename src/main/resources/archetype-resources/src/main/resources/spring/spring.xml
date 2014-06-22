@@ -9,10 +9,10 @@
     <context:property-placeholder location="${config}"/>
 
     <!-- instantiate the HTTP Server -->
-    <bean class="WebServer">
+    <bean class="${package}.WebServer">
         <constructor-arg name="contextPath" value="/"/>
-        <constructor-arg name="deploymentName" value="deploy.war"/>
-        <constructor-arg name="servletName" value="deploy"/>
+        <constructor-arg name="deploymentName" value="${artifactId}.war"/>
+        <constructor-arg name="servletName" value="${artifactId}"/>
         <constructor-arg name="globalContextLocation" value="classpath:undertow/spring.xml"/>
         <constructor-arg name="servletContextLocation" value="classpath:WEB-INF/servlet/spring.xml"/>
         <constructor-arg name="mapping" value="/*"/>
