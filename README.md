@@ -1,3 +1,7 @@
+<a href="https://www.versioneye.com/user/projects/53a677e183add73ff4000008">
+    <img align="right" src="https://www.versioneye.com/user/projects/53a677e183add73ff4000008/badge.svg?style=flat" alt="Dependency Badge">
+</a>
+
 Spring Undertow Archetype
 =========================
 
