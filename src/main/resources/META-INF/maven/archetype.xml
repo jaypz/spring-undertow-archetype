@@ -9,10 +9,10 @@
   <resources>
   	<resource>src/main/resources/spring/spring.xml</resource>
   	<resource>src/main/resources/undertow/spring.xml</resource>
-  	<resource>src/main/resources/WEB-INF/spring.xml</resource>
-  	<resource>src/main/resources/WEB-INF/data-context.xml</resource>
-  	<resource>src/main/resources/WEB-INF/security-context.xml</resource>
-  	<resource>src/main/resources/WEB-INF/servlet-context.xml</resource>
+  	<resource>src/main/resources/WEB-INF/servlet/spring.xml</resource>
+  	<resource>src/main/resources/WEB-INF/servlet/data-context.xml</resource>
+  	<resource>src/main/resources/WEB-INF/servlet/security-context.xml</resource>
+  	<resource>src/main/resources/WEB-INF/servlet/servlet-context.xml</resource>
   	<resource>src/main/resources/app-dev.properties</resource>
   	<resource>src/main/resources/app-test.properties</resource>
   	<resource>src/main/resources/logback.xml</resource>
