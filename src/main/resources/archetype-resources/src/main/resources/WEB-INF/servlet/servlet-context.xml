@@ -14,31 +14,41 @@
     <!-- Component Scan -->
     <context:component-scan base-package="${package}"/>
 
-    <mvc:annotation-driven validator="validator"/>
+    <mvc:annotation-driven validator="validator">
+        <mvc:message-converters>
+            <!-- Use the HibernateAware mapper instead of the default -->
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="objectMapper" ref="objectMapper"/>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 
     <!-- Validation -->
     <bean id="validator"
           class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
 
-    <bean id="stringHttpMessageConverter"
+<!--     <bean id="stringHttpMessageConverter"
           class="org.springframework.http.converter.StringHttpMessageConverter"/>
 
     <bean id="jsonHttpMessageConverter"
           class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
         <property name="objectMapper" ref="objectMapper"/>
-    </bean>
+    </bean> -->
 
-    <bean id="methodHandlerExceptionResolver"
-          class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerExceptionResolver">
-        <property name="messageConverters">
+    <bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
+
+    <!-- Add support for Joda Time (de)serialization -->
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"
+          p:targetObject-ref="objectMapper" p:targetMethod="registerModules">
+        <property name="arguments">
             <list>
-                <ref bean="stringHttpMessageConverter"/>
-                <ref bean="jsonHttpMessageConverter"/>
+                <bean class="com.fasterxml.jackson.datatype.joda.JodaModule"/>
+                <bean class="com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module"/>
             </list>
         </property>
     </bean>
 
-    <bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
+    <bean id="httpExecutor" class="org.apache.http.client.fluent.Executor" factory-method="newInstance"/>
 
     <beans profile="!test">
         <bean id="multipartResolver"

@@ -73,10 +73,6 @@
         <property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
     </bean>
 
-    <bean id="platformTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-        <property name="entityManagerFactory" ref="entityManagerFactory"/>
-    </bean>
-
     <!-- Exception translation bean post processor -->
     <bean class="org.springframework.orm.hibernate4.HibernateExceptionTranslator"/>
 
