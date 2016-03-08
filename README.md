@@ -1,16 +1,16 @@
-<a href="https://www.versioneye.com/user/projects/53a677e183add73ff4000008">
-    <img align="right" src="https://www.versioneye.com/user/projects/53a677e183add73ff4000008/badge.svg?style=flat" alt="Dependency Badge">
-</a>
+work in progress untested
 
-Spring Undertow Archetype
+
+Spring Undertow Archetype +hikaricp
 =========================
+
 
 Dependencies
 ------------
 
 Versions:
 
-    <c3p0.version>0.9.1.2</c3p0.version>
+    <hikaricp.version>2.4.3</hikaricp.version>
     <el.version>2.2.6</el.version>
     <el-api.version>3.0.0</el-api.version>
     <hamcrest.version>1.3</hamcrest.version>
